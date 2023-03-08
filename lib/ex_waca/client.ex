@@ -2,6 +2,7 @@ defmodule ExWaca.Client do
   @moduledoc """
   Documentation for `ExWaca.Client`.
   """
+  alias Plug.Conn.Query
   use Tesla
 
   @api_host "https://graph.facebook.com"
@@ -14,8 +15,8 @@ defmodule ExWaca.Client do
   plug Tesla.Middleware.BaseUrl, "#{@api_host}/#{@api_version}"
   plug Tesla.Middleware.JSON
   plug Tesla.Middleware.FormUrlencoded,
-    encode: &Plug.Conn.Query.encode/1,
-    decode: &Plug.Conn.Query.decode/1
+    encode: &Query.encode/1,
+    decode: &Query.decode/1
   plug Tesla.Middleware.Compression, format: "gzip"
 
   @doc """

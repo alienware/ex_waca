@@ -26,7 +26,7 @@ defmodule ExWaca.APIs.Messages do
       to: recipient_number,
       recipient_type: "individual",
       type: "text",
-      text: %{ body: message },
+      text: %{body: message},
     }
 
     send_request(sender_id, params, client)
@@ -42,7 +42,7 @@ defmodule ExWaca.APIs.Messages do
       recipient_type: "individual",
       type: "text",
       text: %{ body: message },
-      context: %{ message_id: message_id },
+      context: %{message_id: message_id},
     }
 
     send_request(sender_id, params)
@@ -57,8 +57,8 @@ defmodule ExWaca.APIs.Messages do
       to: recipient_number,
       recipient_type: "individual",
       type: "text",
-      text: %{ body: message },
-      context: %{ message_id: message_id },
+      text: %{body: message},
+      context: %{message_id: message_id},
     }
 
     send_request(sender_id, params, client)
@@ -69,7 +69,7 @@ defmodule ExWaca.APIs.Messages do
     client
       |> post("/#{sender_id}/messages", params)
   end
-  
+
   defp send_request(sender_id, params, client) do
     client
       |> post("/#{sender_id}/messages", params)
