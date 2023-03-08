@@ -1,0 +1,12 @@
+cache:
+  directories:
+    - _build
+    - deps
+language: elixir
+elixir:
+  - 1.14.3
+otp_release:
+  - 24.0
+script:
+  - source .env.sample
+  - mix coveralls.travis
