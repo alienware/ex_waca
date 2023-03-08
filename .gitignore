@@ -25,5 +25,11 @@ ex_waca-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
+*.beam
+
+/config/*.secret.exs
+
+.elixir_ls/
+
 # ENV configuration files
-.env*
+.env
