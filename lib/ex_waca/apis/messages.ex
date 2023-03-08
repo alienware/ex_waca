@@ -12,7 +12,7 @@ defmodule ExWaca.APIs.Messages do
       to: recipient_number,
       recipient_type: "individual",
       type: "text",
-      text: %{ body: message },
+      text: %{body: message},
     }
 
     send_request(sender_id, params)
@@ -41,7 +41,7 @@ defmodule ExWaca.APIs.Messages do
       to: recipient_number,
       recipient_type: "individual",
       type: "text",
-      text: %{ body: message },
+      text: %{body: message},
       context: %{message_id: message_id},
     }
 

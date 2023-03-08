@@ -2,6 +2,8 @@
 
 Elixir Whatsapp Cloud API SDK
 
+[![Coverage Status](https://coveralls.io/repos/github/alienware/ex_waca/badge.svg?branch=main)](https://coveralls.io/github/alienware/ex_waca?branch=main)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
